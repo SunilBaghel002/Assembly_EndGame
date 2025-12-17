@@ -1,4 +1,4 @@
-import { languages } from "../assets/languages";
+import { languages } from "../assets/js/languages";
 
 export default function InfoPanel({ currentGameInfo, isVisible, onClose }) {
   const {

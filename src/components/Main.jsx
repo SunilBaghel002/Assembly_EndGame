@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { languages } from "../assets/languages";
+import { languages } from "../assets/js/languages";
 import Language from "./Language";
-import { getFarewellText, getRandomWord } from "../assets/utils";
+import { getFarewellText, getRandomWord } from "../assets/js/utils";
 import clsx from "clsx";
 import Confetti from "react-confetti";
 
