@@ -63,9 +63,11 @@ Guess the hidden word letter by letter before you run out of attempts. Each wron
 
 <div align="center">
 
-| Desktop View | Mobile View |
-|:---:|:---:|
-| 🖥️ Full experience with side panels | 📱 Optimized touch interface |
+| Desktop View |
+
+![Dektop view](./src/assets/images/Screenshot%202025-12-17%20215412.png)
+<!-- ![Moblie View](./src/assets/images/Screenshot%202025-12-17%20215441.png)| -->
+| 🖥️ Full experience with side panels |
 
 </div>
 
