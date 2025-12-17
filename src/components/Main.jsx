@@ -61,6 +61,19 @@ export default function Main({ updateStats, setCurrentGameInfo }) {
     }
   }, [isGameOver, isGameWon, guess.length, updateStats, gameEnded]);
 
+  function storeGuesses(letter) {
+    setGuess((prevLetter) =>
+      prevLetter.includes(letter) ? prevLetter : [...prevLetter, letter]
+    );
+  }
+
+  function newWord() {
+    setCurrentWord(getRandomWord());
+    setGuess([]);
+    setShowHint(false);
+    setGameEnded(false);
+  }
+
   // Keyboard event handler
   const handleKeyDown = useCallback(
     (event) => {
@@ -80,7 +93,7 @@ export default function Main({ updateStats, setCurrentGameInfo }) {
         setTimeout(() => setLastKeyPressed(null), 150);
       }
     },
-    [isGameOver, guess]
+    [isGameOver]
   );
 
   useEffect(() => {
@@ -93,19 +106,6 @@ export default function Main({ updateStats, setCurrentGameInfo }) {
       newGameRef.current.focus();
     }
   }, [isGameOver]);
-
-  function storeGuesses(letter) {
-    setGuess((prevLetter) =>
-      prevLetter.includes(letter) ? prevLetter : [...prevLetter, letter]
-    );
-  }
-
-  function newWord() {
-    setCurrentWord(getRandomWord());
-    setGuess([]);
-    setShowHint(false);
-    setGameEnded(false);
-  }
 
   function getHint() {
     const unguessedLetters = currentWord
